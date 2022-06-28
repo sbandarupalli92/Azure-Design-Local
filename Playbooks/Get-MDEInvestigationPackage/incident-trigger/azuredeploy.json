@@ -188,30 +188,6 @@
                                     "runAfter": {},
                                     "type": "ApiConnection"
                                 },
-                                "Post_a_message_(V3)": {
-                                    "inputs": {
-                                        "body": {
-                                            "body": {
-                                                "content": "<p>The investigation package is ready for download at @{body('Actions_-_Get_investigation_package_download_URI')?['value']}</p>",
-                                                "contentType": "html"
-                                            },
-                                            "subject": "MDATP Investgation Package for @{triggerBody()?['object']?['properties']?['incidentNumber']} is Ready"
-                                        },
-                                        "host": {
-                                            "connection": {
-                                                "name": "@parameters('$connections')['teams']['connectionId']"
-                                            }
-                                        },
-                                        "method": "post",
-                                        "path": "[concat('/v3/beta/teams/@{encodeURIComponent(', parameters('TeamsId'), ')}/channels/@{encodeURIComponent(', parameters('TeamsChannelId'), ')}/messages')]"
-                                    },
-                                    "runAfter": {
-                                        "Add_comment_to_incident_(V3)": [
-                                            "Succeeded"
-                                        ]
-                                    },
-                                    "type": "ApiConnection"
-                                },
                                 "Set_variable": {
                                     "inputs": {
                                         "name": "MachineActionStatus",

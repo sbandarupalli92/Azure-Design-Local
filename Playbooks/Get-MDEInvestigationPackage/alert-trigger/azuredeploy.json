@@ -9,14 +9,6 @@
         "PlaybookName": {
             "defaultValue": "Get-MDEInvestigationPackage",
             "type": "string"
-        },
-        "TeamsId": {
-            "defaultValue": "Enter the Teams Group ID",
-            "type": "string"
-        },
-        "TeamsChannelId": {
-            "defaultValue": "Enter the Teams Channel ID",
-            "type": "string"
         }
     },
     "variables": {
